@@ -4,7 +4,7 @@
 This week's homework required us to build the back end for a workout tracker application with an existing front end. The finished back end was to include a MongoDB database with a Mongoose schema and routes handled by Express.js. This application allows users to view, create and track daily workouts. Users can also log multiple exercises in a workout on a given day. Finally, users are also able to track the name, type, weight, sets, reps, and duration of exercise. 
 
 ## Installation Instructions:
--You can use this application via its deployed link on Heroku: 
+-You can use this application via its deployed link on Heroku: https://immense-headland-48390.herokuapp.com/
 
 -To use this application locally: First, clone this repository. Navigate to the directory containing repository in your terminal. Then, open your terminal. 
 
@@ -28,10 +28,8 @@ This week's homework required us to build the back end for a workout tracker app
 
 ## Deployed Links:
 * [Link to GitHub Repo](https://github.com/egraham96/FitnessTracker)
+* [Link to Deployed Application on Heroku](https://immense-headland-48390.herokuapp.com/)
 
-
-## Preview of Working Application:
-![Video of Deployed Application](./assets/ScreenshotofDeployedApplication.PNG)
 
 ## How to Contribute:
 If you'd like to contribute to this project please send an email to eegraham4@gmail.com. Thank you for your interest!
