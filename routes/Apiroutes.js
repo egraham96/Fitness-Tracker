@@ -12,8 +12,7 @@ router.get('/api/workouts', (req, res) => {
       });
   });
 
-//GET Route for Getting the Range of Workouts
-router.get('/api/workouts/range', (req, res) => {})
+/*GET Route for Getting the Range of Workouts router.get('/api/workouts/range', (req, res) => {})*/
 
 //Post Route for Creating a Workout
 router.post('/api/workouts', ({ body }, res) => {
@@ -27,8 +26,8 @@ router.post('/api/workouts', ({ body }, res) => {
 });
 
 //Put Route for Updating a Workout
-router.put('/api/workouts/:id', ({ body }, res) => {
-    id= req.params['id']
+router.put('/api/workouts/:id', ({ body, params}, res) => {
+    id= params.id
     db.Workout.findByIdAndUpdate(id, {$push: {exercises: body}}, {new: true})
     .then(dbWorkout => {
         res.json(dbWorkout);
