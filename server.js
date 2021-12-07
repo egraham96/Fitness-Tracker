@@ -1,7 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const api = require('./routes/index.js');
 const path = require('path');
 require("dotenv").config();
 
@@ -17,7 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-app.use('/api', api);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/FitnessTracker", 
  {
@@ -25,6 +23,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/FitnessTracker"
   useFindAndModify: false,
   useUnifiedTopology: true,
 });
+
+//API Routes
+app.use(require("./routes/Apiroutes.js"));
 
 //Routes for Static Pages
  app.get("/", function (req ,res){
