@@ -1,6 +1,5 @@
-// Exporting an object containing all of our models
+// Exporting an object containing all of our models, in this case only one model: Workout
 
 module.exports = {
-    Note: require("./Workout"),
-    User: require("./User")
+    Workout: require("./Workout"),
   };
