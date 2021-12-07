@@ -24,10 +24,18 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
   useUnifiedTopology: true,
 });
 
-// GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
+//Routes for Static Pages
+ app.get("/", function (req ,res){
+    res.sendFile(path.join(__dirname, "/public/index.html"))
+  })
+
+  app.get("/exercise", function (req ,res){
+    res.sendFile(path.join(__dirname, "/public/exercise.html"))
+  })
+  
+  app.get("/stats", function (req ,res){
+    res.sendFile(path.join(__dirname, "/public/stats.html"))
+  })
 
 
 app.listen(PORT, () =>
