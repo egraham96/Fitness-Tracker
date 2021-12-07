@@ -31,6 +31,8 @@ This week's homework required us to build the back end for a workout tracker app
 * [Link to GitHub Repo](https://github.com/egraham96/FitnessTracker)
 * [Link to Deployed Application on Heroku](https://immense-headland-48390.herokuapp.com/)
 
+## Screenshot of Deployed Application: 
+![Screenshot](assets/Screenshot.png)
 
 ## How to Contribute:
 If you'd like to contribute to this project please send an email to eegraham4@gmail.com. Thank you for your interest!
