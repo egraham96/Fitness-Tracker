@@ -2,15 +2,16 @@ const router = require('express').Router();
 const db = require("../models");
 
 //GET Route for Getting the last Workout
-router.get('/api/workouts', (req, res) => {
-    db.Workout.find({}).sort({_id:-1}).limit(1)
-    .then(dbWorkout => {
-        res.json(dbWorkout);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      });
+router.get("/api/workouts", (req, res) => { 
+  db.Workout.find({})
+  .then(dbWorkout => {
+      res.json(dbWorkout);
+  })
+  .catch(err => {
+  res.status(400).json(err);
   });
+});
+
 
 //GET Route for Getting the Range of Workouts 
 router.get("/api/workouts/range", ({params}, res) => { 
